@@ -11,8 +11,7 @@ def commit():
 
     run("commit", "-am", commit_message)
     run("push", "-u", "origin", "master")
-    run("ilmir-muslim")
-    run("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")
+    
     
 def clone():
 
