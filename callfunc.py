@@ -1,5 +1,6 @@
-import dbsultaninsertdata as fl2
-import dbsultanoutputdata as fl
+import outputdata as fl
+import inputdata as fl2
+import updatedata as fl3
 
 def callfunc (call):
 
@@ -16,5 +17,8 @@ def callfunc (call):
     
     elif call == 'ввести':
         fl2.inputdata (list(map(str,input('Введите даннные через пробел: ').split())))
+        
+    elif call == 'обновить':
+        fl3.updatedata(list(map(str,input('введите количество, наименование, цвет и размер через пробел: ').split())))    
 
-callfunc (input ('введите команду: (ввести, вывести): /n/n'))
+callfunc (input ('введите команду: (ввести, вывести, обновить): '))

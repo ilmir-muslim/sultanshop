@@ -1,6 +1,6 @@
 import sqlite3
 
-def selectdataname (name):                                     
+def selectdataname (name):           #функция вывода строк по имени                          
     try:
         conn = sqlite3.connect ('Товары.db')        
         cur = conn.cursor()
@@ -24,7 +24,7 @@ def selectdataname (name):
             conn.close()
             print("Соединение с SQLite закрыто")
 
-def selectdatasize (size):
+def selectdatasize (size):  #функция вывода строк по размеру
     try:
         conn = sqlite3.connect ('Товары.db')
         cur = conn.cursor()
@@ -48,7 +48,7 @@ def selectdatasize (size):
             conn.close()
             print("Соединение с SQLite закрыто")
 
-def selectdatacolor (color):
+def selectdatacolor (color):                  #функция вывода строк по цвету
     try:
         conn = sqlite3.connect ('Товары.db')
         cur = conn.cursor()
