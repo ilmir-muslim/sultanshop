@@ -6,7 +6,7 @@ def updatedata (data):
         cur = conn.cursor()
         print("Подключен к SQLite")
         
-        sqlite3_update_data = ("""UPDATE Товары SET Количество = ? WHERE Наименование = ?, Цвет = ?, Размер = ?""")
+        sqlite3_update_data = ("""UPDATE Товары SET Количество = ? WHERE (Наименование = ? * Цвет = ? * Размер = ?)""")
         # не заботает, нужно выяснить способ выбора строки для обновления с несколькими условиями 
         cur.execute(sqlite3_update_data, data)
         conn.commit ()
